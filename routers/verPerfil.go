@@ -4,11 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"encoding/json"
-	"net/http"
-
 	"github.com/gnosotros/gored/bd"
-	"github.com/ptilotta/twittor/bd"
 )
 
 /*VerPerfil permite extraer los valores del Perfil */
