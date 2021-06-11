@@ -32,9 +32,12 @@ func Manejadores() {
 	router.HandleFunc("/bajaRelacion", middlew.ChequeoBD(middlew.ValidoJWT(routers.BajaRelacion))).Methods("DELETE")
 	router.HandleFunc("/consultaRelacion", middlew.ChequeoBD(middlew.ValidoJWT(routers.ConsultaRelacion))).Methods("GET")
 
+	router.HandleFunc("/listaUsuarios", middlew.ChequeoBD(middlew.ValidoJWT(routers.ListaUsuarios))).Methods("GET")
+	//router.HandleFunc("/leoTweetsSeguidores", middlew.ChequeoBD(middlew.ValidoJWT(routers.LeoTweetsSeguidores))).Methods("GET")
+
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
-		PORT = "8101"
+		PORT = "8001"
 	}
 	handler := cors.AllowAll().Handler(router)        // permisos con ip
 	log.Fatal(http.ListenAndServe(":"+PORT, handler)) //pone el servidor a escuchar el puerto para dar respuesta al navegador
