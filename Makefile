@@ -1,6 +1,7 @@
 # Go parameters
 MAIN_PATH=main.go
-BINARY_NAME=$(BINARY_PATH)/tiwttor
+BINARY_NAME=$(BINARY_PATH)/twittor
+BINARY_NAME=twittor
 BINARY_PATH=bin
 
 run:
